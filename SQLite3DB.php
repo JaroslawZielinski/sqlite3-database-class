@@ -208,6 +208,9 @@ class SQLite3DB extends SQLite3 {
 			case "exists":
 				$build .= $operator . " (" . $val . ")";
 				break;
+            case "like":
+                $build .= $operator . " '" . $val;
+                break;
 			default:
 				$build .= $operator . " '" . $val . "'";
 			}
